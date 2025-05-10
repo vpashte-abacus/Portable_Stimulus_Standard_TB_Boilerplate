@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------
-# Copyright (C) 2024 Abacus Semiconductor Corporation
+# Copyright (C) 2025 Abacus Semiconductor Corporation
 # All rights reserved.
 #
 # This source code is proprietary and confidential unless stated otherwise
@@ -145,7 +145,7 @@ class DriveDUTTransaction(vsc.Action):
             f"expected={expected_result:#x}  observed={observed_result:#x}")
 
 # ---------------------------------------------------------------------------
-# STEP 4 • Simple activity loop — suitable for smoke testing
+# STEP 4 • Simple activity loop
 # ---------------------------------------------------------------------------
 @vsc.activity
 def run_randomised_test_suite():
@@ -155,7 +155,7 @@ def run_randomised_test_suite():
 # ---------------------------------------------------------------------------
 # STEP 5 • Run Portable Stimulus scenario
 # ---------------------------------------------------------------------------
-print("[INFO] Executing Portable Stimulus scenario…")
+print("[INFO] Executing Portable Stimulus scenario")
 run_randomised_test_suite.randomize()
 shared_lib.finish()
 print("[INFO] Test run completed successfully — all assertions passed.")
